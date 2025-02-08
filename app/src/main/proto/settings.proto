@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "com.duuolf.launcher.data";
+option java_multiple_files = true;
+
+message Contact {
+    int64 id = 1;
+    string name = 2;
+    string phoneNumber = 3;
+    string photoURI = 4;
+    int32 order = 5;
+}
+
+message Settings {
+    string passwordMd5 = 1;
+    int32 batteryThreshold = 2;
+    bool isCustomizeHome = 3;
+    repeated Contact contacts = 4;
+    bool isDND = 5;
+    int32 dndStartTime = 6;
+    int32 dndEndTime = 7;
+    bool isVibrate = 8;
+}
